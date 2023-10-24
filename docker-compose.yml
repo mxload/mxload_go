@@ -1,0 +1,9 @@
+version: "3"
+services:
+  golang:
+    build: .
+    ports:
+      - "8080:80"
+    working_dir: /go/src/git.drecom.jp/diet/buuurst_dev_go
+    volumes:
+      - ./:/go/src/git.drecom.jp/diet/buuurst_dev_go:cached
