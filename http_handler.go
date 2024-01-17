@@ -11,8 +11,10 @@ func MiddlewareFunc(config *BuuurstDevConfig) func(next http.Handler) http.Handl
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			bodyBytes, err := io.ReadAll(r.Body)
 			r.Body.Close()
+			r.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
+
 			if err != nil {
-				r.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
+				return
 			}
 			writer := NewResponseWriterWithStatus(w)
 			next.ServeHTTP(writer, r)
