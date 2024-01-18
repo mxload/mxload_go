@@ -11,11 +11,11 @@ func MiddlewareFunc(config *BuuurstDevConfig) func(next http.Handler) http.Handl
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			bodyBytes, err := io.ReadAll(r.Body)
 			r.Body.Close()
-			r.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
-
 			if err != nil {
+				http.Error(w, "Internal Server Error: Failed to read request", http.StatusInternalServerError)
 				return
 			}
+			r.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
 			writer := NewResponseWriterWithStatus(w)
 			next.ServeHTTP(writer, r)
 			c := NewCollector(config)
