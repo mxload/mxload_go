@@ -13,7 +13,7 @@ services:
 
     volumes:
       # Update this to wherever you want VS Code to mount the folder of your project
-      - .:/go/src/git.drecom.jp/diet/buuurst_dev_go:cached
+      - .:/go/src/github.com/mxload/buuurst_dev_go:cached
 
     # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
     # cap_add:

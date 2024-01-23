@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	buuurst_dev "git.drecom.jp/diet/buuurst_dev_go"
 	"github.com/labstack/echo"
+	buuurst_dev "github.com/mxload/buuurst_dev_go"
 )
 
 func main() {

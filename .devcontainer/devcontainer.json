@@ -13,7 +13,7 @@
 	"service": "golang",
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/go/src/git.drecom.jp/diet/buuurst_dev_go",
+	"workspaceFolder": "/go/src/github.com/mxload/buuurst_dev_go",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

@@ -1,8 +1,8 @@
-module git.drecom.jp/diet/buuurst_dev_go/examples/gin
+module github.com/mxload/buuurst_dev_go/examples/gin
 
 go 1.20
 
-require git.drecom.jp/diet/buuurst_dev_go v0.0.1
+require github.com/mxload/buuurst_dev_go v0.0.1
 
 require github.com/gin-gonic/gin v1.9.1
 
@@ -36,4 +36,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace git.drecom.jp/diet/buuurst_dev_go => ../../
+replace github.com/mxload/buuurst_dev_go => ../../

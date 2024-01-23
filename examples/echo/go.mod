@@ -1,8 +1,8 @@
-module git.drecom.jp/diet/buuurst_dev_go/examples/echo
+module github.com/mxload/buuurst_dev_go/examples/echo
 
 go 1.20
 
-require git.drecom.jp/diet/buuurst_dev_go v0.0.1
+require github.com/mxload/buuurst_dev_go v0.0.1
 
 require (
 	github.com/google/uuid v1.3.1 // indirect
@@ -18,4 +18,4 @@ require (
 	golang.org/x/text v0.13.0 // indirect
 )
 
-replace git.drecom.jp/diet/buuurst_dev_go => ../../
+replace github.com/mxload/buuurst_dev_go => ../../

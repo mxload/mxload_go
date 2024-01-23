@@ -4,7 +4,7 @@ Golang middleware for Mx.Load
 ## Installation
 
 ```
-go get git.drecom.jp/diet/buuurst_dev_go
+go get github.com/mxload/buuurst_dev_go
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ go get git.drecom.jp/diet/buuurst_dev_go
 import (
     ...
 
-    buuurst_dev "git.drecom.jp/diet/buuurst_dev_go"
+    buuurst_dev "github.com/mxload/buuurst_dev_go"
 )
 
 func main() {
@@ -48,7 +48,7 @@ func main() {
 import (
     ...
 
-    buuurst_dev "git.drecom.jp/diet/buuurst_dev_go"
+    buuurst_dev "github.com/mxload/buuurst_dev_go"
 )
 
 func main() {
@@ -80,7 +80,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	adapter "github.com/gwatts/gin-adapter"
-	buuurst_dev "git.drecom.jp/diet/buuurst_dev_go"
+	buuurst_dev "github.com/mxload/buuurst_dev_go"
 )
 
 func main() {

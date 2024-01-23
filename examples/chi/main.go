@@ -3,9 +3,9 @@ package main
 import (
 	"net/http"
 
-	buuurst_dev "git.drecom.jp/diet/buuurst_dev_go"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	buuurst_dev "github.com/mxload/buuurst_dev_go"
 )
 
 func main() {
