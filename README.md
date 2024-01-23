@@ -1,7 +1,6 @@
 # buuurst_dev_go
 
-Golang middleware for Buuurst.Dev
-
+Golang middleware for Mx.Load
 ## Installation
 
 ```
