@@ -1,10 +1,10 @@
-# buuurst_dev_go
+# mxload_go
 
 Golang middleware for Mx.Load
 ## Installation
 
 ```
-go get github.com/mxload/buuurst_dev_go
+go get github.com/mxload/mxload_go
 ```
 
 ## Usage
@@ -15,16 +15,16 @@ go get github.com/mxload/buuurst_dev_go
 import (
     ...
 
-    buuurst_dev "github.com/mxload/buuurst_dev_go"
+    mxload "github.com/mxload/mxload_go"
 )
 
 func main() {
     r := chi.NewRouter()
 
-    // Add buuurst_dev middleware
-	r.Use(buuurst_dev.MiddlewareFunc(
-        // buuurst_dev collector configuration
-		&buuurst_dev.BuuurstDevConfig{
+    // Add mxload middleware
+	r.Use(mxload.MiddlewareFunc(
+        // mxload collector configuration
+		&mxload.MxloadConfig{
 			Enabled:      true, // Make collector enable/disable
 			CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 			ProjectID:    YOUR_PROJECT_ID, // Set your project ID
@@ -48,14 +48,14 @@ func main() {
 import (
     ...
 
-    buuurst_dev "github.com/mxload/buuurst_dev_go"
+    mxload "github.com/mxload/mxload_go"
 )
 
 func main() {
 	e := echo.New()
 
-	e.Use(echo.WrapMiddleware(buuurst_dev.MiddlewareFunc(
-		&buuurst_dev.BuuurstDevConfig{
+	e.Use(echo.WrapMiddleware(mxload.MiddlewareFunc(
+		&mxload.MxloadConfig{
 			Enabled:      true,
 			CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 			ProjectID:    YOUR_PROJECT_ID,
@@ -80,14 +80,14 @@ import (
 
 	"github.com/gin-gonic/gin"
 	adapter "github.com/gwatts/gin-adapter"
-	buuurst_dev "github.com/mxload/buuurst_dev_go"
+	mxload "github.com/mxload/mxload_go"
 )
 
 func main() {
   r := gin.Default()
 
-  r.Use(adapter.Wrap(buuurst_dev.MiddlewareFunc(
-	&buuurst_dev.BuuurstDevConfig{
+  r.Use(adapter.Wrap(mxload.MiddlewareFunc(
+	&mxload.MxloadConfig{
 		Enabled:      true,
 		CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 		ProjectID:    YOUR_PROJECT_ID,

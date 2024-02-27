@@ -5,13 +5,13 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	buuurst_dev "github.com/mxload/buuurst_dev_go"
+	mxload "github.com/mxload/mxload_go"
 )
 
 func main() {
 	r := chi.NewRouter()
-	r.Use(buuurst_dev.MiddlewareFunc(
-		&buuurst_dev.BuuurstDevConfig{
+	r.Use(mxload.MiddlewareFunc(
+		&mxload.MxloadConfig{
 			Enabled:      true,
 			CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 			ProjectID:    YOUR_PROJECT_ID,

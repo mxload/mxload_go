@@ -1,5 +1,5 @@
 FROM golang:1.20-alpine
-WORKDIR /go/src/github.com/mxload/buuurst_dev_go
+WORKDIR /go/src/github.com/mxload/mxload_go
 
 RUN apk add --no-cache gcc \
     git \

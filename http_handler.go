@@ -1,4 +1,4 @@
-package buuurst_dev
+package mxload
 
 import (
 	"bytes"
@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func MiddlewareFunc(config *BuuurstDevConfig) func(next http.Handler) http.Handler {
+func MiddlewareFunc(config *MxloadConfig) func(next http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			// Responsibility for error handling is deferred to the parent application.

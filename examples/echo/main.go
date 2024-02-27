@@ -4,14 +4,14 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
-	buuurst_dev "github.com/mxload/buuurst_dev_go"
+	mxload "github.com/mxload/mxload_go"
 )
 
 func main() {
 	e := echo.New()
 
-	e.Use(echo.WrapMiddleware(buuurst_dev.MiddlewareFunc(
-		&buuurst_dev.BuuurstDevConfig{
+	e.Use(echo.WrapMiddleware(mxload.MiddlewareFunc(
+		&mxload.MxloadConfig{
 			Enabled:      true,
 			CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 			ProjectID:    YOUR_PROJECT_ID,

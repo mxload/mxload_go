@@ -1,4 +1,4 @@
-package buuurst_dev
+package mxload
 
 import (
 	"bytes"
@@ -10,7 +10,7 @@ import (
 )
 
 type Collector struct {
-	config *BuuurstDevConfig
+	config *MxloadConfig
 }
 
 type collectorLogBody struct {
@@ -27,7 +27,7 @@ type collectorLogBody struct {
 	Status        int                 `json:"status"`
 }
 
-func NewCollector(config *BuuurstDevConfig) *Collector {
+func NewCollector(config *MxloadConfig) *Collector {
 	return &Collector{config: config}
 }
 

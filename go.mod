@@ -1,4 +1,4 @@
-module github.com/mxload/buuurst_dev_go
+module github.com/mxload/mxload_go
 
 go 1.20
 
