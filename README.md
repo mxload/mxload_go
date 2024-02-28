@@ -27,10 +27,10 @@ func main() {
         // buuurst_dev collector configuration
 		&buuurst_dev.BuuurstDevConfig{
 			Enabled:      true, // Make collector enable/disable
-			CollectorURL: "https://lambda-public.buuurst.dev/put-request-log",
+			CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 			ProjectID:    YOUR_PROJECT_ID, // Set your project ID
 			ServiceKey:   "YOUR_SERVICE_KEY", // Set your service key
-			CustomHeaders: []string{ // Set headers that should be sent to buuurst.dev
+			CustomHeaders: []string{ // Set headers that should be sent to mxload.mx
 				"Authorization",
 			},
 			IgnorePaths: []string{ // Set ignored paths
@@ -58,7 +58,7 @@ func main() {
 	e.Use(echo.WrapMiddleware(buuurst_dev.MiddlewareFunc(
 		&buuurst_dev.BuuurstDevConfig{
 			Enabled:      true,
-			CollectorURL: "https://lambda-public.buuurst.dev/put-request-log",
+			CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 			ProjectID:    YOUR_PROJECT_ID,
 			ServiceKey:   "YOUR_SERVICE_KEY",
 			CustomHeaders: []string{
@@ -90,7 +90,7 @@ func main() {
   r.Use(adapter.Wrap(buuurst_dev.MiddlewareFunc(
 	&buuurst_dev.BuuurstDevConfig{
 		Enabled:      true,
-		CollectorURL: "https://lambda-public.buuurst.dev/put-request-log",
+		CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 		ProjectID:    YOUR_PROJECT_ID,
 		ServiceKey:   "YOUR_SERVICE_KEY",
 		CustomHeaders: []string{

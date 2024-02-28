@@ -14,7 +14,7 @@ func main() {
   r.Use(adapter.Wrap(buuurst_dev.MiddlewareFunc(
 	&buuurst_dev.BuuurstDevConfig{
 		Enabled:      true,
-		CollectorURL: "https://lambda-public.buuurst.dev/put-request-log",
+		CollectorURL: "https://lambda-public.mxload.mx/put-request-log",
 		ProjectID:    YOUR_PROJECT_ID,
 		ServiceKey:   "YOUR_SERVICE_KEY",
 		CustomHeaders: []string{
