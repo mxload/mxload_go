@@ -1,4 +1,4 @@
-module git.drecom.jp/diet/buuurst_dev_go
+module github.com/mxload/mxload_go
 
 go 1.20
 
